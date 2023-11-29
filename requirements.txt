@@ -1,3 +1,4 @@
-cryptography==3.3.2
-colorama==0.4.4
-requests==2.25.1
+colorama
+cryptography
+requests
+ttkthemes
