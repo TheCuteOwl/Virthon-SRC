@@ -9,39 +9,8 @@ file_path = fr"c:\Users\{user_name}\user_virthon.txt"
 
 dark_background = "#808080"
 
-user_credentials = [
-    ("stelow", "rzazDzNflAW7BQAfG8Vt"),
-    ("kowa", "VQKg9lxLvpcxoGubVWpu"),
-    ("mizorui", "jrEzBiBFTFoX6ZajGRFS"),
-    ("H3", "1GSWBZrxdmtnKISONMP3"),
-    ("tatsu", "TkIHqaOmypZq4iefbZcT"),
-    ("gagnant1", "HWKMabIKyxoDkWKKEbqn"),
-    ("gagnant2", "CLqUBapu0dCbsRphBHG5"),
-    ("gagnant3", "XR1IoIvjLDdHVbtTFo2B"),
-]
-
 def check_login():
-    username = username_entry.get()
-    password = password_entry.get()
-
-    if os.path.exists(file_path):
-        with open(file_path, "r") as file:
-            content = file.readlines()
-            for line in content:
-                parts = line.strip().split(":")
-                if len(parts) == 2:
-                    username_file, password_file = parts
-                    if username == username_file and password == password_file:
-                        builder()
-                        return
-    else:
-        for user, passwd in user_credentials:
-            if username == user and password == passwd:
-                with open(file_path, "x") as file:
-                    file.write(f"{username}:{password}\n")
-                builder()
-                return
-    messagebox.showerror("Erreur", "Nom d'utilisateur ou mot de passe incorrect")
+    builder()
 
 def builder():
     root.destroy()
