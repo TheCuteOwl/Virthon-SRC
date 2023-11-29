@@ -1,6 +1,6 @@
 # Virthon-SRC
 
-This is a repository of the stealer named "Virthon". I would like to make it clear that I hate people who obfuscate their files. The source code of the obfuscated stealer named Virthon can be found here.
+This is a repository of the stealer named "Virthon". I would like to make it clear that I hate people who obfuscate their files. The source code of the obfuscated stealer named Virthon can be found here. [Original Github](https://github.com/stelows/Virthon)
 
 ## Why I Hate Obfuscation
 
