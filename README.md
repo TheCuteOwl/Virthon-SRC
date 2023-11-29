@@ -5,6 +5,7 @@ This is a repository of the stealer named "Virthon". I would like to make it cle
 ## Why I Hate Obfuscation
 
 Obfuscation is a technique used by developers to make their code difficult to understand. However, I believe that all code should be transparent and understandable. Obfuscation not only makes it difficult to modify a tool, but it also prevents people from learning from it.
+Even if Virthon Obfuscation is bad (I mean, Replacing exec with print)
 
 ## The Goal of This Repository
 
