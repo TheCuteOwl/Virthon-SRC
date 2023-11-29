@@ -1,4 +1,7 @@
 # Virthon-SRC
+I'll update it every update of Virthon 
+
+I removed the protections so anyone can use it
 
 This is a repository of the stealer named "Virthon". I would like to make it clear that I hate people who obfuscate their files. The source code of the obfuscated stealer named Virthon can be found here. [Original Github](https://github.com/stelows/Virthon)
 
