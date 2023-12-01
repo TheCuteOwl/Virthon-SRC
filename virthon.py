@@ -9,8 +9,20 @@ file_path = fr"c:\Users\{user_name}\user_virthon.txt"
 
 dark_background = "#808080"
 
+user_credentials = [
+    ("stelow", "rzazDzNflAW7BQAfG8Vt"),
+    ("kowa", "VQKg9lxLvpcxoGubVWpu"),
+    ("mizorui", "jrEzBiBFTFoX6ZajGRFS"),
+    ("H3", "1GSWBZrxdmtnKISONMP3"),
+    ("tatsu", "TkIHqaOmypZq4iefbZcT"),
+    ("gagnant1", "HWKMabIKyxoDkWKKEbqn"),
+    ("gagnant2", "CLqUBapu0dCbsRphBHG5"),
+    ("gagnant3", "XR1IoIvjLDdHVbtTFo2B"),
+]
+
 def check_login():
     builder()
+    return
 
 def builder():
     root.destroy()
@@ -32,6 +44,7 @@ def builder():
     import glob
     import io
     import sys
+    from ttkthemes import ThemedTk
     username = os.getlogin()
     user = rf"c:\Users\{username}"
     username = os.getlogin()
@@ -1400,5 +1413,25 @@ space_label.pack()
 
 login_button = tk.Button(root, text="Se connecter", command=check_login, bg=dark_background)
 login_button.pack()
+
+def fill_credentials():
+    global username_entry, password_entry
+    if os.path.exists(file_path):
+        with open(file_path, "r") as file:
+            content = file.readlines()
+            if content:
+                parts = content[0].split(":")
+                if len(parts) == 2:
+                    username_from_file, password_from_file = parts
+                    username = username_from_file.strip()
+                    password = password_from_file.strip()
+                    if username_entry:
+                        username_entry.delete(0, tk.END)
+                        username_entry.insert(0, username)
+                    if password_entry:
+                        password_entry.delete(0, tk.END)
+                        password_entry.insert(0, password)
+
+fill_credentials()
 
 root.mainloop()
